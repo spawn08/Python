@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 By listing the first six prime numbers:
 
@@ -6,16 +5,10 @@ By listing the first six prime numbers:
 
 We can see that the 6th prime is 13. What is the Nth prime number?
 """
-from __future__ import print_function
 from math import sqrt
 
-try:
-    raw_input  # Python 2
-except NameError:
-    raw_input = input  # Python 3
 
-
-def isprime(n):
+def is_prime(n):
     if n == 2:
         return True
     elif n % 2 == 0:
@@ -30,7 +23,7 @@ def isprime(n):
 
 def solution(n):
     """Returns the n-th prime number.
- 
+
     >>> solution(6)
     13
     >>> solution(1)
@@ -48,14 +41,14 @@ def solution(n):
     j = 1
     while i != n and j < 3:
         j += 1
-        if isprime(j):
+        if is_prime(j):
             i += 1
     while i != n:
         j += 2
-        if isprime(j):
+        if is_prime(j):
             i += 1
     return j
 
 
 if __name__ == "__main__":
-    print(solution(int(raw_input().strip())))
+    print(solution(int(input().strip())))

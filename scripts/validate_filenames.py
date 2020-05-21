@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 import os
-from build_directory_md import good_filepaths
+from build_directory_md import good_file_paths
 
-filepaths = list(good_filepaths())
-assert filepaths, "good_filepaths() failed!"
+filepaths = list(good_file_paths())
+assert filepaths, "good_file_paths() failed!"
 
 
 upper_files = [file for file in filepaths if file != file.lower()]
@@ -25,4 +25,5 @@ if nodir_files:
 bad_files = len(upper_files + space_files + nodir_files)
 if bad_files:
     import sys
+
     sys.exit(bad_files)

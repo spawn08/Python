@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Collatz conjecture: start with any positive integer n. Next term obtained from
 the previous term as follows:
@@ -24,12 +23,6 @@ that all starting numbers finish at 1.
 
 Which starting number, under one million, produces the longest chain?
 """
-from __future__ import print_function
-
-try:
-    raw_input  # Python 2
-except NameError:
-    raw_input = input  # Python 3
 
 
 def collatz_sequence(n):
@@ -63,7 +56,7 @@ def solution(n):
 
 
 if __name__ == "__main__":
-    result = solution(int(raw_input().strip()))
+    result = solution(int(input().strip()))
     print(
         "Longest Collatz sequence under one million is %d with length %d"
         % (result["largest_number"], result["counter"])

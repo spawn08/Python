@@ -1,4 +1,3 @@
-# -*- coding: latin-1 -*-
 """
 Name scores
 Problem 22
@@ -16,12 +15,6 @@ obtain a score of 938 × 53 = 49714.
 What is the total of all the name scores in the file?
 """
 import os
-
-
-try:
-    xrange  # Python 2
-except NameError:
-    xrange = range  # Python 3
 
 
 def solution():

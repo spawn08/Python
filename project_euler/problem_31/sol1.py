@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Coin sums
 Problem 31
@@ -11,12 +10,6 @@ It is possible to make £2 in the following way:
 1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p
 How many different ways can £2 be made using any number of coins?
 """
-from __future__ import print_function
-
-try:
-    raw_input  # Python 2
-except NameError:
-    raw_input = input  # Python 3
 
 
 def one_pence():
@@ -52,7 +45,7 @@ def two_pound(x):
 
 
 def solution(n):
-    """Returns the number of different ways can £n be made using any number of
+    """Returns the number of different ways can n pence be made using any number of
     coins?
 
     >>> solution(500)
